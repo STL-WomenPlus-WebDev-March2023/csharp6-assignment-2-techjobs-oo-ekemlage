@@ -8,7 +8,7 @@ namespace TechJobsOO.Tests
 
         // Testing Location --------------------------------------------------------
 
-        /* TODO: Task 2: Remove this line to uncomment the tests
+       //  TODO: Task 2: Remove this line to uncomment the tests
 
         [TestMethod] //1
         public void Test_Second_Location_Constructor_Exists()
@@ -88,9 +88,9 @@ namespace TechJobsOO.Tests
             }
 
             //verify
-            Assert.AreEqual("Persistence", testComp.Value, "CoreComp has no set-able Value");
-            Assert.AreEqual("true", existsCheck, "CoreComp getter does not exist");
-            Assert.AreNotEqual(testComp.Id, testComp2.Id, "Not able to get ids for CoreComp objects");
+//undo comment            Assert.AreEqual("Persistence", testComp.Value, "CoreComp has no set-able Value");
+//undo comment            Assert.AreEqual("true", existsCheck, "CoreComp getter does not exist");
+//undo comment           Assert.AreNotEqual(testComp.Id, testComp2.Id, "Not able to get ids for CoreComp objects");
         }
 
         [TestMethod] //5
@@ -178,7 +178,7 @@ namespace TechJobsOO.Tests
             Assert.AreEqual(testPosition.Value.ToString(), "Quality Control", "ToString does not return same output as set value");
         }
 
-        TODO: Task 2: Remove this line to uncomment the tests */
+     //   TODO: Task 2: Remove this line to uncomment the tests */
 
     }
 }

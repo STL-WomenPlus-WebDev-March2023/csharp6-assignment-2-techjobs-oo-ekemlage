@@ -19,6 +19,27 @@ namespace TechJobsOOAutoGraded6
         }
 
         // TODO: Task 2: Add custom Equals(), GetHashCode(), and ToString() methods.
+    //begin my changes
+
+        public override string ToString() 
+        { 
+            return Value;
+        }
+
+        public override int GetHashCode()
+        {
+            return Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is PositionType positionType && 
+                Id == positionType.Id;
+        }
+
+        //end my changes
+
+
     }
 }
 

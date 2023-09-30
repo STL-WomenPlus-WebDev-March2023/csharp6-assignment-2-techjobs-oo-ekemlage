@@ -14,6 +14,15 @@ namespace TechJobsOOAutoGraded6
         }
 
         // TODO: Task 2: Add a second constructor to this class that uses the Location() constructor and sets the value of the value field.
+       //my changes begin
+        public Location(string value) : this()
+        {
+            Value = value;
+            Id = nextId; //allows second constructor to update id
+            nextId++; //allows second constructor to update id... worried that combined with this() might be incrementing twice
+        }
+        //my changes end
+
 
         public override bool Equals(object obj)
         {

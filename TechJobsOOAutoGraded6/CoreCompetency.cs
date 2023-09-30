@@ -3,9 +3,9 @@ namespace TechJobsOOAutoGraded6
 {
 	public class CoreCompetency
 	{
-        private int id;
+        private int id {  get; set; } //removed ; added {get set}
         private static int nextId = 1;
-        private string value;
+        public string value { get; set; } //made public, removed ; added {get set}
 
         // TODO: Task 2: Change the fields to auto-implemented properties.
 
