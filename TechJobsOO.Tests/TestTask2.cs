@@ -88,9 +88,9 @@ namespace TechJobsOO.Tests
             }
 
             //verify
-//undo comment            Assert.AreEqual("Persistence", testComp.Value, "CoreComp has no set-able Value");
-//undo comment            Assert.AreEqual("true", existsCheck, "CoreComp getter does not exist");
-//undo comment           Assert.AreNotEqual(testComp.Id, testComp2.Id, "Not able to get ids for CoreComp objects");
+            Assert.AreEqual("Persistence", testComp.Value, "CoreComp has no set-able Value");
+            Assert.AreEqual("true", existsCheck, "CoreComp getter does not exist");
+            Assert.AreNotEqual(testComp.Id, testComp2.Id, "Not able to get ids for CoreComp objects");
         }
 
         [TestMethod] //5

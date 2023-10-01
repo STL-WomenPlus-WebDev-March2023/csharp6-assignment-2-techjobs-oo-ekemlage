@@ -1,4 +1,7 @@
 ﻿
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Diagnostics.Metrics;
+
 namespace TechJobs.Tests
 {
     [TestClass]
@@ -27,7 +30,7 @@ namespace TechJobs.Tests
             Assert.AreEqual(job3.EmployerName.Value,"ACME", "EmployerName incorrect");
             Assert.AreEqual(job3.EmployerLocation.Value, "Desert", "EmployerLocation incorrect");
             Assert.AreEqual(job3.JobType.Value, "Quality control", "JobType incorrect");
-            Assert.AreEqual(job3.JobCoreCompetency.value, "Persistence", "JobCoreCompetency incorrect");
+            Assert.AreEqual(job3.JobCoreCompetency.Value, "Persistence", "JobCoreCompetency incorrect");
 
         }
 
@@ -35,6 +38,43 @@ namespace TechJobs.Tests
         public void TestJobsForEquality()
         {
             Assert.IsFalse(job1.Equals(job2),"Equals returned true when it should have returned false.");
+        }
+
+        [TestMethod]
+        public void TestToStringStartsAndEndsWithNewLine()
+        {
+            Assert.IsTrue(job4.ToString().Contains(""), "Job information converted into string does not begin and end with a new line.");
+            Assert.IsTrue(false, "I need to fix this. Not sure the best way to approach this.");
+        }
+
+        [TestMethod]
+        public void TestToDelete()
+        {
+            Assert.AreEqual(job4.ToString(), "hmmm", "error");
+        }
+
+        [TestMethod]
+        public void TestToStringContainsCorrectLabelsAndData()
+        {
+            List<string> labels = new List<string> { "ID","Name","Employer","Location","Position Type","Core Competency"};
+            for(int i = 0; i < labels.Count; i++)
+            {
+                Assert.IsTrue(job3.ToString().Contains(labels[i]), "Does not contain the label: " + labels[i]);
+            }
+
+            List<string> data = new List<string> {Convert.ToString(job3.Id), job3.Name , Convert.ToString(job3.EmployerName), Convert.ToString(job3.EmployerLocation) , Convert.ToString(job3.JobType) , Convert.ToString(job3.JobCoreCompetency) };
+            for (int i = 0; i < data.Count; i++)
+            {
+                Assert.IsTrue(job3.ToString().Contains(data[i]), "Does not contain the data: " + data[i]);
+            }
+        }
+
+        [TestMethod]
+        public void TestToStringHandlesEmptyField()
+        {
+            Assert.IsTrue(job1.ToString().Contains("Data not available"), "The message 'Data not available' is not printed when necesarry.");
+            Assert.IsFalse(job3.ToString().Contains("Data not available"), "The message 'Data not available' is unnecesarry and should not be printed.");
+
         }
     }
 }
