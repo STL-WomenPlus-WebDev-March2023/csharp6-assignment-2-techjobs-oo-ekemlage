@@ -43,14 +43,8 @@ namespace TechJobs.Tests
         [TestMethod]
         public void TestToStringStartsAndEndsWithNewLine()
         {
-            Assert.IsTrue(job4.ToString().Contains(""), "Job information converted into string does not begin and end with a new line.");
-            Assert.IsTrue(false, "I need to fix this. Not sure the best way to approach this.");
-        }
-
-        [TestMethod]
-        public void TestToDelete()
-        {
-            Assert.AreEqual(job4.ToString(), "hmmm", "error");
+            Assert.IsTrue(job4.ToString().StartsWith("\n"),"String does not start with new line.");
+            Assert.IsTrue(job4.ToString().EndsWith("\n"),"String does not end with new line.");
         }
 
         [TestMethod]
