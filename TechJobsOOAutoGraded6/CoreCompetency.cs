@@ -1,8 +1,16 @@
 ﻿using System;
 namespace TechJobsOOAutoGraded6
 {
-	public class CoreCompetency
+	public class CoreCompetency : JobField
 	{
+        public CoreCompetency() : base()
+        {
+        }
+
+        public CoreCompetency(string value) : base(value)
+        {
+        }
+        /*
         public int Id {  get; set; } //removed ; added {get set} // made id uppercase //made public
         private static int nextId = 1;
         public string Value { get; set; } //made public, removed ; added {get set} //made value uppercase
@@ -35,6 +43,7 @@ namespace TechJobsOOAutoGraded6
         {
             return Value; //made value uppercase
         }
+        */
     }
 }
 
