@@ -1,40 +1,49 @@
 ﻿using System;
 namespace TechJobsOOAutoGraded6
 {
-	public class CoreCompetency
+	public class CoreCompetency : JobField
 	{
-        private int id;
+        //public CoreCompetency() : base()
+        //{
+        //}
+
+        public CoreCompetency(string value) : base(value)
+        {
+        }
+        /*
+        public int Id {  get; set; } //removed ; added {get set} // made id uppercase //made public
         private static int nextId = 1;
-        private string value;
+        public string Value { get; set; } //made public, removed ; added {get set} //made value uppercase
 
         // TODO: Task 2: Change the fields to auto-implemented properties.
 
         public CoreCompetency()
         {
-            id = nextId;
+            Id = nextId; //made id uppercase
             nextId++;
         }
 
         public CoreCompetency(string v) : this()
         {
-            value = v;
+            Value = v; //made value uppercase
         }
 
         public override bool Equals(object obj)
         {
             return obj is CoreCompetency competency &&
-                   id == competency.id;
+                   Id == competency.Id; //made id uppercase
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(id);
+            return HashCode.Combine(Id); //made id uppercase
         }
 
         public override string ToString()
         {
-            return value;
+            return Value; //made value uppercase
         }
+        */
     }
 }
 

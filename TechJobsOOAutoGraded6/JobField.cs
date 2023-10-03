@@ -1,36 +1,32 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace TechJobsOOAutoGraded6
 {
-	public class Employer : JobField
-	{
-
-       // public Employer() : base()
-       // { 
-       // }
-
-        public Employer(string value) : base(value) 
-        {
-        }
-        /*
+    public abstract class JobField
+    {
         public int Id { get; }
-        private static int nextId = 1;
+        private static int nextId = 1;//better private
         public string Value { get; set; }
 
-        public Employer()
+        public JobField() 
         {
             Id = nextId;
             nextId++;
         }
 
-        public Employer(string value) : this()
+        public JobField(string value) : this()
         {
             Value = value;
         }
 
         public override bool Equals(object obj)
         {
-            return obj is Employer employer &&
-                   Id == employer.Id;
+            return obj is JobField jobField &&
+                Id == jobField.Id;
         }
 
         public override int GetHashCode()
@@ -42,8 +38,6 @@ namespace TechJobsOOAutoGraded6
         {
             return Value;
         }
-        */
-    }
-        
-}
 
+    }
+}
