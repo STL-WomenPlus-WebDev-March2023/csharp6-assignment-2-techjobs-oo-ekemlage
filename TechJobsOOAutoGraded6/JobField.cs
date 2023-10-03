@@ -9,7 +9,7 @@ namespace TechJobsOOAutoGraded6
     public abstract class JobField
     {
         public int Id { get; }
-        public static int nextId = 1;
+        private static int nextId = 1;//better private
         public string Value { get; set; }
 
         public JobField() 

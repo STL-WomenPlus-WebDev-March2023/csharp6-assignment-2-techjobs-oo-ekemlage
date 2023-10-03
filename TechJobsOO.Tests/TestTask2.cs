@@ -11,7 +11,7 @@ namespace TechJobsOO.Tests
        //  TODO: Task 2: Remove this line to uncomment the tests
 
         [TestMethod] //1
-        public void Test_Second_Location_Constructor_Exists()
+        public void Test1_Second_Location_Constructor_Exists()
         {
             Type locType = typeof(Location);
             ConstructorInfo[] constructorInfos = locType.GetConstructors();
@@ -40,7 +40,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //2
-        public void Test_Second_Location_Constructor_Initializes_Value()
+        public void Test2_Second_Location_Constructor_Initializes_Value()
         {
             //setup
             Location testLocation = new Location("Desert");
@@ -52,7 +52,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //3
-        public void Test_Second_Location_Constructor_Initializes_Id()
+        public void Test3_Second_Location_Constructor_Initializes_Id()
         {
             //setup
             Location testLocation = new Location("Desert");
@@ -67,7 +67,7 @@ namespace TechJobsOO.Tests
         // Testing CoreCompetency --------------------------------------------------------
 
         [TestMethod] //4
-        public void Test_CoreCompetency_Accessor_SetUp()
+        public void Test4_CoreCompetency_Accessor_SetUp()
         {
             //setup
             CoreCompetency testComp = new CoreCompetency("Persistence");
@@ -94,7 +94,7 @@ namespace TechJobsOO.Tests
         }
 
         [TestMethod] //5
-        public void Test_CoreCompetency_Has_No_Id_Setter_SetUp()
+        public void Test5_CoreCompetency_Has_No_Id_Setter_SetUp()
         {
             Type ccType = typeof(CoreCompetency);
             MemberInfo[] memberInfos = ccType.GetMembers();
@@ -119,7 +119,7 @@ namespace TechJobsOO.Tests
         // Testing PositionType --------------------------------------------------------
 
         [TestMethod] //6
-        public void Test_PositionType_Equals_Method_SetUp()
+        public void Test6_PositionType_Equals_Method_SetUp()
         {
             // set up
             PositionType testPosition = new PositionType("Quality Control");
@@ -143,7 +143,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //7
-        public void Test_PositionType_HashCode_SetUp()
+        public void Test7_PositionType_HashCode_SetUp()
         {
             // set up
             PositionType testPosition = new PositionType("Quality Control");
@@ -162,7 +162,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //8
-        public void Test_PositionType_ToString_SetUp()
+        public void Test8_PositionType_ToString_SetUp()
         {
             //setup
             PositionType testPosition = new PositionType("Quality Control");
